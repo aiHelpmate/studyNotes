@@ -1,0 +1,90 @@
+\documentclass{article}
+\bibliographystyle{plainnat}
+\usepackage{amsmath, amssymb}
+\usepackage{url}
+\usepackage{natbib}
+\usepackage{minted}   % For code highlighting
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[margin=1in]{geometry}
+
+% ============================================================
+% Title and Author – adapt as needed
+% ============================================================
+\title{Your Title Here}
+\author{
+  {\Large Your Name} \\
+  \vspace{0.2em}
+  {\small Your Affiliation, Institution} \\
+  {\small \texttt{your.email@domain}}
+}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+% ----------------------------------------------------------------------
+% Optional abstract / introduction
+% ----------------------------------------------------------------------
+\section*{Introduction}
+Write your introduction here. This template retains the exact formatting 
+(margins, fonts, packages) from the original GRPO paper.
+
+% ----------------------------------------------------------------------
+% Main sections – adapt structure as needed
+% ----------------------------------------------------------------------
+\section{First Section}
+\label{sec:first}
+
+Here you can include theoretical details, equations, and figures.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{example-image} % replace with your image
+    \caption{Example figure caption.}
+    \label{fig:example}
+\end{figure}
+
+\subsection{A Subsection}
+You can use \texttt{minted} for code snippets:
+
+\begin{minted}[fontsize=\small, bgcolor=gray!5, frame=lines, framesep=2mm, baselinestretch=1.1, linenos]{python}
+def hello():
+    print("Hello, world!")
+\end{minted}
+
+Equations are supported:
+\[
+    E = mc^2
+\]
+
+\section{Second Section}
+\label{sec:second}
+
+More content here.
+
+\subsection{Key Formulas}
+\begin{enumerate}
+    \item Advantage: \( A_i = \frac{r_i - \bar{r}}{\sigma_r + \epsilon} \)
+    \item Probability ratio: \( \text{ratio}_{i,t} = \frac{\pi_\theta(o_{i,t} \mid q, o_{i,<t})}{\pi_{\theta_{\text{old}}}(o_{i,t} \mid q, o_{i,<t})} \)
+\end{enumerate}
+
+\section{Conclusion}
+Summarize your work.
+
+% ----------------------------------------------------------------------
+% Bibliography – keep the same style and use \bibitem or .bib file
+% ----------------------------------------------------------------------
+\begin{thebibliography}{9}
+
+\bibitem{key1}
+Author. \textit{Title}. Available at: \url{https://example.com}. Accessed: Date.
+
+\bibitem{key2}
+Another Author. \textit{Book or Paper}. Journal, Year.
+
+\end{thebibliography}
+
+\end{document}
