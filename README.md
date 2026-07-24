@@ -4,4 +4,5 @@
 
 ## Writing Schedule
 
-- [x] By July: Complete writing on `06-rl-alignment` (PPO, DPO, GRPO).
+- [ ] By July: Complete writing on `06-rl-alignment` (PPO, DPO, GRPO).
+<!-- [x] By August: ... -->
