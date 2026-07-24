@@ -10,7 +10,7 @@
 
 ---
 
-## 🗂️ Repository Structure
+## 🗂️ Structure
 
 ```text
 studyNotes/
@@ -30,7 +30,7 @@ studyNotes/
 
 ---
 
-## 🗓️ Current Writing Roadmap
+## 🗓️ Roadmap
 
 | Section | Focus Areas | Status | Target |
 | :--- | :--- | :--- | :--- |
