@@ -14,9 +14,18 @@
 
 ```text
 studyNotes/
-├── 01-foundation-models/    # 
-├── 06-rl-alignment/         # 
-└── 12-paper-notes/          
+├── 01-foundation-models/              # Foundation model architectures (LLM + VLM)
+├── 02-pretraining-data/               # Pretraining data processing (dedup, tokenization, mixing)
+├── 03-distributed-training/           # Distributed training (DeepSpeed, 3D parallelism, communication)
+├── 04-sft-instruction-tuning/         # Supervised fine-tuning & instruction tuning
+├── 05-peft-lora/                      # Parameter-efficient fine-tuning (LoRA, QLoRA, Adapters)
+├── 06-rl-alignment/                   # Preference alignment (PPO, DPO, GRPO)
+├── 07-inference-serving/              # Inference & serving (vLLM, KV cache, speculative decoding)
+├── 08-rag-vector-search/              # Retrieval-augmented generation (vector search, reranking, HyDE)
+├── 09-eval-benchmarks/                # Evaluation & benchmarks (LM-Eval-Harness, MMLU, GSM8K)
+├── 10-agentic-tools/                  # Agents & tool calling (Hermes, ReAct, memory)
+├── 11-interview-notes/                # Interview preparation (system design, algorithms)
+└── 12-paper-notes/                    # Paper reading notes (extended deep dives)
 ```
 
 ---
