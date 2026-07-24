@@ -36,5 +36,3 @@ studyNotes/
 | :--- | :--- | :--- | :--- |
 | **06-rl-alignment** | PPO · DPO · GRPO | 🟡 In Progress | **July 2026** |
 | **01-foundation-models** | LLM (core) · VLM (time-permitting) | 📝 Planned | **August 2026** |
-
-- [ ] *Next: Draft full sections on PPO.*
