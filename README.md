@@ -38,7 +38,3 @@ studyNotes/
 | **01-foundation-models** | LLM (core) · VLM (time-permitting) | 📝 Planned | **August 2026** |
 
 - [ ] *Next: Draft full sections on PPO.*
-
----
-
-<i>⚡ “We stand on the shoulders of giants; we document to lift the next generation.”</i>
