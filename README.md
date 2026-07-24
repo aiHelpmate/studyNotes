@@ -41,6 +41,4 @@ studyNotes/
 
 ---
 
-<p align="center">
-  <i>⚡ “We stand on the shoulders of giants; we document to lift the next generation.”</i>
-</p>
+<i>⚡ “We stand on the shoulders of giants; we document to lift the next generation.”</i>
