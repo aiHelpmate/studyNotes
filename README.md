@@ -5,4 +5,4 @@
 ## Writing Schedule
 
 - [ ] By July: Complete writing on `06-rl-alignment` (PPO, DPO, GRPO).
-- [x] By August: Complete writing for `01-foundation-models`, with focus on LLM history, and cover VLM if time allows.
+- [ ] By August: Complete writing for `01-foundation-models`, with focus on LLM history, and cover VLM if time allows.
