@@ -1,58 +1,52 @@
-**I. Introduction**
-*   **1.1 Background and Significance** — A brief overview of deep reinforcement learning and the central role of PPO.
-*   **1.2 Overview of the PPO Algorithm** — Core ideas, development history, and its position within policy gradient methods.
-*   **1.3 Limitations of Existing Surveys and Our Contributions** — Identifying gaps in previous reviews (e.g., lacking coverage of recent variants) and clarifying the scope and novelty of this survey.
-*   **1.4 Paper Organization** — Roadmap of the following sections.
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    >=Stealth,
+    box/.style={
+        draw, rounded corners, minimum width=2.6cm, minimum height=0.8cm,
+        align=center, font=\sffamily\bfseries, drop shadow,
+        fill=cyan!20
+    },
+    root/.style={box, fill=orange!20, minimum width=3.2cm}
+]
 
----
+% 右侧节点
+\node[box] (agent) at (6.5,  1.5) {Agent};
+\node[box] (env)   at (6.5,  0.0) {Environment};
+\node[box] (state) at (6.5, -1.8) {State};
+\node[box] (action) at (6.5, -3.3) {Action};
+\node[box] (reward) at (6.5, -4.8) {Reward};
 
-**II. Preliminaries: Reinforcement Learning and Policy Gradients**
-*   **2.1 Fundamentals of Reinforcement Learning** — Markov Decision Processes (MDPs), policies, value functions, and the objective of RL.
-*   **2.2 Policy Gradient Methods** — The policy gradient theorem, the REINFORCE algorithm, and the high-variance issue.
-*   **2.3 From TRPO to PPO** — How Trust Region Policy Optimization stabilizes updates via KL-divergence constraints, and how PPO simplifies the approach.
+% 大括号（振幅 8pt）
+\draw[decorate, decoration={brace, amplitude=8pt, mirror}, 
+      thick, blue!60!black] 
+      (agent.west) -- (env.west)
+      node[midway, left=12pt, font=\sffamily\bfseries, text=blue!60!black] 
+      {Two Components};
 
----
+\draw[decorate, decoration={brace, amplitude=8pt, mirror}, 
+      thick, blue!60!black] 
+      (state.west) -- (reward.west)
+      node[midway, left=12pt, font=\sffamily\bfseries, text=blue!60!black] 
+      {Three Elements};
 
-**III. A Deep Dive into the PPO Algorithm**
-*   **3.1 The PPO Objective Function** — A detailed analysis of the clipped surrogate objective, its motivation, and mechanism.
-*   **3.2 Advantage Function Estimation** — Generalized Advantage Estimation (GAE) and its trade-off between bias and variance.
-*   **3.3 Algorithm Workflow and Implementation** — Standard implementation steps and pseudocode.
-*   **3.4 PPO Variants** — A systematic categorization of PPO improvements, including:
-    *   *Adaptive mechanisms* — Dynamically adjusting clipping range or entropy coefficients.
-    *   *Architectural simplifications* — Lightweight variants tailored for specific domains (e.g., large language models).
+% 大括号中点（括号路径的中点）
+\coordinate (compMid) at ($(agent.west)!0.5!(env.west)$);
+\coordinate (elemMid) at ($(state.west)!0.5!(reward.west)$);
 
----
+% 箭头终点向左偏移 3cm（避开大括号线）
+\coordinate (compTarget) at ($(compMid) + (-3,0)$);
+\coordinate (elemTarget) at ($(elemMid) + (-3,0)$);
 
-**IV. Theoretical Analysis of PPO**
-*   **4.1 Convergence Analysis** — A review of theoretical convergence results and proof techniques.
-*   **4.2 Stability and Robustness** — Theoretical explanations for PPO's training stability.
-*   **4.3 Theoretical Comparisons with Other Algorithms** — Contrasting PPO with TRPO, SAC, and other representative RL methods.
+% 根节点垂直居中于两个目标点
+\coordinate (midHeight) at ($(compTarget)!0.5!(elemTarget)$);
+\node[root] (rl) at (0,0 |- midHeight) {Reinforcement\\Learning};
 
----
+% 直线箭头（从根节点右侧直接指向目标点）
+\draw[->, thick, orange!60!black] (rl.east) -- (compTarget);
+\draw[->, thick, orange!60!black] (rl.east) -- (elemTarget);
 
-**V. Applications of PPO**
-*   **5.1 Game AI** — PPO's successes in video games (e.g., Dota 2, Go, and Atari).
-*   **5.2 Robotic Control** — Applications in robotic arm manipulation, quadruped locomotion, etc.
-*   **5.3 Large Language Model Alignment** — PPO as the core RL algorithm in Reinforcement Learning from Human Feedback (RLHF) for training models like ChatGPT.
-*   **5.4 Autonomous Driving** — Decision-making and path planning.
-*   **5.5 Communication Network Optimization** — Resource management in 5G/6G networks.
-*   **5.6 Other Emerging Domains** — Finance, supply chain, energy systems, etc.
-
----
-
-**VI. Challenges and Future Directions**
-*   **6.1 Current Challenges**
-    *   *Sample Efficiency* — Reducing the demand for environment interactions.
-    *   *Reward Design* — Crafting robust and well-shaped reward functions.
-    *   *Sim-to-Real Transfer* — Deploying policies trained in simulation to real-world systems.
-    *   *Computational Overhead* — Reducing training costs, especially in large-model settings.
-*   **6.2 Promising Future Research Directions**
-    *   *More Efficient Algorithms* — Exploring alternatives that outperform PPO in specific regimes.
-    *   *Multi-Agent PPO* — Extending PPO to multi-agent systems.
-    *   *Stronger Theoretical Guarantees* — Tighter convergence bounds and stability proofs.
-    *   *Integration with Emerging Paradigms* — Meta-learning, causal inference, world models, etc.
-
----
-
-**VII. Conclusion**
-*   A concise summary of PPO's core strengths, key application domains, and its lasting impact on the RL community.
+\end{tikzpicture}
+\caption{Basic Elements of RL.}
+\label{fig:rl_basic_elements}
+\end{figure}
