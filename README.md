@@ -1,6 +1,6 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square" alt="Status">
   <img src="https://img.shields.io/badge/Focus-LLM_&_RL-brightblue?style=flat-square" alt="Focus">
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square" alt="Status">
   <img src="https://img.shields.io/badge/Updated-July_2026-informational?style=flat-square" alt="Updated">
 </p>
 
@@ -34,11 +34,13 @@ studyNotes/
 
 | Section | Focus Areas | Status | Target |
 | :--- | :--- | :--- | :--- |
-| **06-rl-alignment** | PPO · DPO · GRPO | 🚧 In Progress | **July 2026** |
+| **06-rl-alignment** | PPO · DPO · GRPO | 🟡 In Progress | **July 2026** |
 | **01-foundation-models** | LLM (core) · VLM (time-permitting) | 📝 Planned | **August 2026** |
 
 - [ ] *Next: Draft full sections on PPO.*
 
 ---
 
-**⚡ “We stand on the shoulders of giants; we document to lift the next generation.”**
+<p align="center">
+  <i>⚡ “We stand on the shoulders of giants; we document to lift the next generation.”</i>
+</p>
